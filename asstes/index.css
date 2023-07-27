@@ -1,0 +1,15 @@
+h3{
+    color: brown;
+    font-style: italic;
+}
+
+button{
+    margin-top: 1%;
+    color: wheat;
+    background-color: brown;
+    font-style: italic;
+}
+
+.container{
+font-style: italic;
+}
