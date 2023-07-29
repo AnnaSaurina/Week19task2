@@ -1,5 +1,5 @@
 // Добавляю переменные для получения элементов
-let postFormText = document.querySelector('.post__form-title');
+let postFormTitle = document.querySelector('.post__form-title');
 let postFormText = document.querySelector('.post__form-text');
 let postFormButton = document.querySelector('.post__form-btn');
 let postFormPublication = document.querySelector('.post__publication');
@@ -23,11 +23,24 @@ function publish ()  {
         console.log(json.title);
         wrapper.innerHTML = `
         <p class="published__title">${json.title}</p>
-        <p class="published__text">${json.body}</p>+
+        <p class="published__text">${json.body}</p>
     `;
-    container.appendChild(wrapper);
+    postFormPublication.appendChild(wrapper);
     })
     .catch((error) => {
         console.log('Error' + error);
     })
 }
+
+// Добавляю обработчик для опубликования поста
+postFormButton.addEventListener('click', event => {
+    event.preventDefault();
+    if (postFormTitle === '' || postFormText === '') {
+        alert('The input fields are not filled in');
+    } else {
+        postFormTitle = document.querySelector('.post__form-title');
+        postFormText = document.querySelector('.post__form-text');
+        publish();
+    }
+});
+
