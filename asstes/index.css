@@ -1,4 +1,9 @@
-h3{
+.container{
+    text-align: center;
+    font-style: italic;
+    }
+
+.header{
     color: brown;
     font-style: italic;
 }
@@ -10,6 +15,18 @@ button{
     font-style: italic;
 }
 
-.container{
-font-style: italic;
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
 }
+
+.published__title{
+    font-weight: bold;
+    color: brown;
+}
+
+.published__text{
+    color: rgba(165, 42, 42, 0.562);
+}
+
